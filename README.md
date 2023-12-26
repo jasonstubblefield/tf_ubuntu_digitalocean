@@ -23,15 +23,11 @@ Export a variable to the terminal with your Digital Ocean token.
 
 Make sure you have your rsa public key added to Digital Ocean.
 
-Check the code: `terraform plan \    
-  -var "do_token=${DO_TOKEN}" \
-  -var "private_key=$HOME/.ssh/id_rsa"
+Check the code: `terraform plan -var "do_token=${DO_TOKEN}" -var "private_key=$HOME/.ssh/id_rsa"`
 
 If running terraform plan was successful, you can  apply the plan and create your server:
 
-Run the code: `terraform apply \    
-  -var "do_token=${DO_TOKEN}" \
-  -var "private_key=$HOME/.ssh/id_rsa"`
+Run the code: `terraform apply -var "do_token=${DO_TOKEN}" -var "private_key=$HOME/.ssh/id_rsa"`
 
 Sources:
 
